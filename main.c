@@ -3,5 +3,6 @@
 
 int	main(void)
 {
+	ft_printf("dcd", 2, 'a', 3);
 	return (0);
 }
