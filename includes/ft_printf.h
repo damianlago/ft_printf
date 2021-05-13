@@ -6,6 +6,6 @@
 #include <stdlib.h>
 #include "../libft/libft.h"
 
-int	ft_printf(void);
+int	ft_printf(const char *format, ...);
 
 #endif
