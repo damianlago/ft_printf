@@ -1,25 +1,28 @@
 #include "../includes/ft_printf.h"
-#include <stdio.h>
-#include <stdarg.h>
 
 int	ft_printf(const char *format, ...)
 {
-	va_list args;
-	va_start(args, format);
-	while (*format != '\0')
+	int i;
+	int ret;
+	t_printf *tab;
+
+	i = -1;
+	ret = 0;
+	tab = (t_printf *)malloc(sizeof(t_printf));
+	if (!tab)
+		return (-1);
+	else
+		ft_initialise(tab);;
+	va_start(tab->args, format);
+	while (format[++i])
 	{
-		if (*format == 'd')
-		{
-			int decimal = va_arg(args, int);
-			printf("%d", decimal);
-		}
-		else if (*format == 'c')
-		{
-			int character = va_arg(args, int);
-			printf("%c", character);
-		}
-	++format;
+		if (format[i] == '%')
+			i = ft_eval_format(format, tab, i + 1);
+		else
+			ret += write(1, &format[i], 1);
 	}
-	va_end(args);
-	return (0);
+	va_end(tab->args);
+	ret += tab->len;
+	free(tab);
+	return (ret);
 }
