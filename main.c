@@ -3,6 +3,9 @@
 
 int	main(void)
 {
-	ft_printf("dcd");
+	int ret;
+
+	ret = ft_printf("%c%s d", 'g', "hola");
+	printf("%d", ret);
 	return (0);
 }

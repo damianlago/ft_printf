@@ -2,11 +2,11 @@ NAME	=	libftprintf.a
 
 CC	=	gcc
 
-
+CFLAGS = -Wall -Wextra -Werror
 
 LIBFT_OBJS	=	libft/*.o
 
-SRC	=	src/ft_printf.c src/ft_initialise.c src/ft_eval_format.c
+SRC	=	src/ft_printf.c src/ft_initialise.c src/ft_eval_format.c src/ft_is_char.c src/ft_is_str.c
 
 OBJS	=	$(SRC:.c=.o)
 

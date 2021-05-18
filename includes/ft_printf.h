@@ -9,20 +9,21 @@
 typedef	struct	s_printf
 {
 	va_list	args;
-	int	perc;
-	int	widht;
-	int	prec;
-	int	zero;
-	int	point;
-	int	dash;
-	int	sign;
-	int	space;
-	int	is_zero;
-	int	len;
+	int	i;
+	int len;
+	int minus;
+	int dot;
+	int zero;
+	int hash;
+	int width;
+	int precision;
 }	t_printf;
 
-int		ft_printf(const char *format, ...);
+int			ft_printf(const char *format, ...);
 t_printf	*ft_initialise(t_printf *tab);
-int		ft_eval_format(const char *format, t_printf *tab, int i);
+int			ft_eval_format(const char *format, t_printf *tab, int i);
+int			ft_conversion(const char *format, t_printf *tab, int i);
+void		ft_is_char(t_printf *tab);
+void		ft_is_str(t_printf *tab);
 
 #endif

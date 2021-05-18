@@ -12,14 +12,14 @@ int	ft_printf(const char *format, ...)
 	if (!tab)
 		return (-1);
 	else
-		ft_initialise(tab);;
+		ft_initialise(tab);
 	va_start(tab->args, format);
 	while (format[++i])
 	{
 		if (format[i] == '%')
 			i = ft_eval_format(format, tab, i + 1);
 		else
-			ret += write(1, &format[i], 1);
+			ret += ft_putchar(format[i]);
 	}
 	va_end(tab->args);
 	ret += tab->len;
