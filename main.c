@@ -5,7 +5,7 @@ int	main(void)
 {
 	int ret;
 
-	ret = ft_printf("%c%s d", 'g', "hola");
-	printf("%d", ret);
+	ret = ft_printf("%u", -78);
+	printf("%u", 78);
 	return (0);
 }

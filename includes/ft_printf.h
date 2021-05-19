@@ -25,5 +25,8 @@ int			ft_eval_format(const char *format, t_printf *tab, int i);
 int			ft_conversion(const char *format, t_printf *tab, int i);
 void		ft_is_char(t_printf *tab);
 void		ft_is_str(t_printf *tab);
+void		ft_is_int(t_printf *tab);
+void		ft_is_u_int(t_printf *tab);
+void		ft_is_pointer(t_printf *tab);
 
 #endif
