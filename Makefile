@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 LIBFT_OBJS	=	libft/*.o
 
-SRC	=	src/ft_printf.c src/ft_initialise.c src/ft_eval_format.c src/ft_is_char.c src/ft_is_int.c
+SRC	=	src/ft_printf.c src/ft_initialise.c src/ft_eval_format.c src/ft_is_char.c src/ft_is_int.c src/ft_is_hexa.c
 
 OBJS	=	$(SRC:.c=.o)
 

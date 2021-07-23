@@ -21,6 +21,5 @@ void	ft_is_pointer(t_printf *tab)
 	char		*ptr;
 
 	ptr = va_arg(tab->args, char *);
-	ft_pointeradress(ptr);
-	tab->len += 0;
+	tab->len += ft_pointeradress(ptr);
 }

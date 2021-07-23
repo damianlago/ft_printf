@@ -28,5 +28,7 @@ void		ft_is_str(t_printf *tab);
 void		ft_is_int(t_printf *tab);
 void		ft_is_u_int(t_printf *tab);
 void		ft_is_pointer(t_printf *tab);
+void		ft_is_hexa_lower(t_printf *tab);
+void		ft_is_hexa_upper(t_printf *tab);
 
 #endif

@@ -1,10 +1,12 @@
 #include "libft.h"
 
-void	ft_hexalower(unsigned long nb)
+int	ft_hexalower(unsigned long nb)
 {
 	size_t	n;
 	char	c;
-
+	int		ret;
+	
+	ret = 0;
 	n = nb;
 	if (n >= 16)
 		ft_hexalower(n / 16);
@@ -13,14 +15,17 @@ void	ft_hexalower(unsigned long nb)
 		c = n + '0';
 	else
 		c = n + 87;
-	ft_putchar(c);
+	ret += ft_putchar(c);
+	return(ret);
 }
 
-void	ft_hexaupper(unsigned long nb)
+int	ft_hexaupper(unsigned long nb)
 {
 	size_t	n;
 	char	c;
+	int		ret;
 
+	ret = 0;
 	n = nb;
 	if (n >= 16)
 		ft_hexaupper(n / 16);
@@ -29,5 +34,6 @@ void	ft_hexaupper(unsigned long nb)
 		c = n + '0';
 	else
 		c = n + 55;
-	ft_putchar(c);
+	ret += ft_putchar(c);
+	return(ret);
 }

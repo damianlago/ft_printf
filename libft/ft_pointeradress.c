@@ -1,9 +1,12 @@
 #include "libft.h"
 
-void	ft_pointeradress(char *str)
+int	ft_pointeradress(char *str)
 {
 	size_t	*c;
-	
+	int		ret;
+
 	c = (size_t *)&str;
-	ft_hexalower(*c);
+	ret = ft_putstr("0x");
+	ret += ft_hexalower(*c);
+	return(ret);
 }

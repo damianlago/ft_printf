@@ -29,5 +29,11 @@ int	ft_conversion(const char *format, t_printf *tab, int i)
 		ft_is_u_int(tab);
 	else if (format[i] == 'p')
 		ft_is_pointer(tab);
+	else if	(format[i] == 'x')
+		ft_is_hexa_lower(tab);
+	else if (format[i] == 'X')
+		ft_is_hexa_upper(tab);
+	else if (format[i] == '%')
+		ft_putchar('%');
 	return (i++);
 }

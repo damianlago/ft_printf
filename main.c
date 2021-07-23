@@ -5,8 +5,10 @@ int	main(void)
 {
 	int ret;
 	void *str;
+	int data = 29;
+	char test = 'h';
 
-	ret = ft_printf("%p", str);
 	ft_printf("%p", str);
+	printf("\n%p", str);
 	return (0);
 }
