@@ -1,21 +1,33 @@
 #include "libft.h"
 
-char	*ft_hexadecimal(size_t num)
+void	ft_hexalower(unsigned long nb)
 {
-	size_t	temp;
-	char	hexanum[100];
-	int	i;
+	size_t	n;
+	char	c;
 
-	i = 1;
-	while (num != '\0')
-	{
-		temp = num / 16;
-		if (num < 10)
-			temp = temp + 48;
-		else
-			temp = temp + 55;
-		hexanum[i++] = temp;
-		num = num / 16;			
-	}
-	return (hexanum);
+	n = nb;
+	if (n >= 16)
+		ft_hexalower(n / 16);
+	n = n % 16;
+	if (n < 10)
+		c = n + '0';
+	else
+		c = n + 87;
+	ft_putchar(c);
+}
+
+void	ft_hexaupper(unsigned long nb)
+{
+	size_t	n;
+	char	c;
+
+	n = nb;
+	if (n >= 16)
+		ft_hexaupper(n / 16);
+	n = n % 16;
+	if (n < 10)
+		c = n + '0';
+	else
+		c = n + 55;
+	ft_putchar(c);
 }

@@ -10,8 +10,6 @@ int	ft_eval_format(const char *format, t_printf *tab, int i)
 			tab->minus = 1;
 		else if (format[i] == '0')
 			tab->zero = 1;
-		else if (format[i] == '*')
-			tab->hash = 1;
 		i++;
 	}
 	if (ft_strchr(("cspdiuxX%"), format[i]))

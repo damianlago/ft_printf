@@ -69,5 +69,8 @@ int				ft_putchar(char c);
 int				ft_putstr(char *str);
 char			*ft_u_itoa(int n);
 char			*ft_hexadecimal(size_t num);
+void			ft_hexalower(unsigned long nb);
+void			ft_hexaupper(unsigned long nb);
+void			ft_pointeradress(char *str);
 
 #endif

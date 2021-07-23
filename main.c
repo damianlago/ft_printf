@@ -4,8 +4,9 @@
 int	main(void)
 {
 	int ret;
+	void *str;
 
-	ret = ft_printf("%u", -78);
-	printf("%u", 78);
+	ret = ft_printf("%p", str);
+	ft_printf("%p", str);
 	return (0);
 }

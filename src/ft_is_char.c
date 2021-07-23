@@ -18,10 +18,9 @@ void	ft_is_str(t_printf *tab)
 
 void	ft_is_pointer(t_printf *tab)
 {
-	unsigned long	ptr;
-	char		*aux;
+	char		*ptr;
 
-	ptr = va_arg(tab->args, unsigned long);
-	aux = ft_hexadecimal(ptr);
-	tab->len += ft_putstr(aux);
+	ptr = va_arg(tab->args, char *);
+	ft_pointeradress(ptr);
+	tab->len += 0;
 }
