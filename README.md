@@ -1,2 +1,2 @@
 # ft_printf
-printf recode 
+Recode of the printf function from the stdio.h library. This project mimic the original printf function, implementing variadic functions.
