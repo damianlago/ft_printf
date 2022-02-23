@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:52:35 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/07/23 13:07:53 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2022/02/15 19:57:53 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int				ft_putchar(char c);
 int				ft_putstr(char *str);
 char			*ft_u_itoa(int n);
 char			*ft_hexadecimal(size_t num);
-int				ft_hexalower(unsigned long nb);
+void			ft_hexalower(unsigned long nb);
 int				ft_hexaupper(unsigned long nb);
 int				ft_pointeradress(char *str);
 
